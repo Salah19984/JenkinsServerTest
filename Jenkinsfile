@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'python3 /var/lib/jenkins/workspace/TestBuildCalc/unittest/test_calc.py'
+                sh 'python3 unittest/test_calc.py'
                 
             }
         }

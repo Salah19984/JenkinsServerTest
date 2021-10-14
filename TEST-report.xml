@@ -1,0 +1,8 @@
+<testsuites>
+	<testsuite name="testCalc-20211014163344" tests="4" file=".py" time="0.018" timestamp="2021-10-14T16:33:44" failures="0" errors="0" skipped="0">
+		<testcase classname="testCalc" name="test_add" time="0.014"/>
+		<testcase classname="testCalc" name="test_divide" time="0.001"/>
+		<testcase classname="testCalc" name="test_multiply" time="0.002"/>
+		<testcase classname="testCalc" name="test_substract" time="0.001"/>
+	</testsuite>
+</testsuites>
