@@ -5,7 +5,6 @@ sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
 import io
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import xmlrunner
 from xmlrunner.extra.xunit_plugin import transform
 
