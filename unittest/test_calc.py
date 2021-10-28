@@ -1,11 +1,10 @@
 '''easiest working solution to include the import path from calc without __init__.py as the project is structured in different directories'''
-#import sys
-#from pathlib import Path
-#sys.path[0] = str(Path(sys.path[0]).parent)
+import sys
+from pathlib import Path
+sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
-import calc
-import xmlrunner
+from src import calc
 
 class testCalc(unittest.TestCase):
     
@@ -36,4 +35,4 @@ class testCalc(unittest.TestCase):
 
         
 if __name__ == '__main__':
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='./test_results'))
+    unittest.main()
