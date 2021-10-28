@@ -4,10 +4,6 @@ from pathlib import Path
 sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
-import io
-import xmlrunner
-from xmlrunner.extra.xunit_plugin import transform
-
 from src import calc
 
 class testCalc(unittest.TestCase):
@@ -39,8 +35,4 @@ class testCalc(unittest.TestCase):
 
         
 if __name__ == '__main__':
-    out = io.BytesIO()
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output=out), failfast=False, buffer=False, catchbreak=False, exit=False)
-
-    with open('TEST-report.xml', 'wb') as report:
-        report.write(transform(out.getvalue()))
+    unittest.main()
