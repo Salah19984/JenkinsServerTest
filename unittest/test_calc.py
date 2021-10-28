@@ -5,6 +5,7 @@ sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
 from src import calc
+import io
 
 class testCalc(unittest.TestCase):
     
@@ -35,4 +36,6 @@ class testCalc(unittest.TestCase):
 
         
 if __name__ == '__main__':
+    out = io.BytesIO()
+    print(out)
     unittest.main()
