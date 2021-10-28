@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
-from src import calc
+from /var/lib/jenkins/workspace/TestPipeline/src import calc
 import xmlrunner
 
 class testCalc(unittest.TestCase):
