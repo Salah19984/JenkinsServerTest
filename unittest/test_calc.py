@@ -5,6 +5,7 @@ sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
 from src import calc
+import xmlrunner
 
 class testCalc(unittest.TestCase):
     
@@ -35,4 +36,4 @@ class testCalc(unittest.TestCase):
 
         
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='./test_results'))
