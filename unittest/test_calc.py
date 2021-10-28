@@ -38,4 +38,8 @@ class testCalc(unittest.TestCase):
 if __name__ == '__main__':
     out = io.BytesIO()
     print(out)
+    with open('TEST-report.xml', 'wb') as report:
+        report.write(out.getvalue())
+    print(report)
+
     unittest.main()
