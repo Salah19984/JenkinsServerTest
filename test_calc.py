@@ -4,7 +4,7 @@
 #sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
-import calc
+from src import calc
 import xmlrunner
 
 class testCalc(unittest.TestCase):
