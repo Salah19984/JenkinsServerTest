@@ -1,7 +1,7 @@
 '''easiest working solution to include the import path from calc without __init__.py as the project is structured in different directories'''
-import sys
-from pathlib import Path
-sys.path[0] = str(Path(sys.path[0]).parent)
+#import sys
+#from pathlib import Path
+#sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
 from /var/lib/jenkins/workspace/TestPipeline/src import calc
