@@ -1,4 +1,3 @@
-/* Declarative Format of Jenkinsfile for RWU Continuous Integration Project */
 pipeline {
     agent any
 
@@ -16,7 +15,7 @@ pipeline {
     }
         stage('Test') {
             steps {
-               sh 'python3 -m ./unittest/test_calc.py' 
+               sh 'python3 ./unittest/test_calc.py' 
            }
         }
         stage('Deploy') {
