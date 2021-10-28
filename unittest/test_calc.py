@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''easiest working solution to include the import path from calc without __init__.py as the project is structured in different directories'''
 import sys
 from pathlib import Path
