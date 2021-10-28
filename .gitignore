@@ -13,7 +13,6 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-test_results/
 .eggs/
 lib/
 lib64/
@@ -51,6 +50,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+test_results/*.txt
 
 # Translations
 *.mo

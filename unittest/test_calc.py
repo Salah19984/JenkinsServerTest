@@ -5,7 +5,7 @@ sys.path[0] = str(Path(sys.path[0]).parent)
 
 import unittest
 from src import calc
-import io
+import xml.etree.ElementTree as ET
 
 class testCalc(unittest.TestCase):
     
@@ -32,14 +32,14 @@ class testCalc(unittest.TestCase):
         self.assertEqual(calc.divide(10, 5,), 2)
         self.assertEqual(calc.divide(-1, 1,), -1)
         self.assertEqual(calc.divide(-1, -1,), 1)
-        
 
-        
+     
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)
+      
 if __name__ == '__main__':
-    out = io.BytesIO()
-    print(out)
-    with open('TEST-report.xml', 'wb') as report:
-        report.write(out.getvalue())
-    print(report)
-
-    unittest.main()
+    with open('test_results/Test-results.txt', 'w') as report:
+        main(report)
