@@ -1,9 +1,6 @@
-test_add (__main__.testCalc) ... ok
-test_divide (__main__.testCalc) ... ok
-test_multiply (__main__.testCalc) ... ok
-test_substract (__main__.testCalc) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 0.002s
-
-OK
+<testsuite errors="0" failures="0" name="pytest" skips="0" tests="4" time="0.021">
+<testcase classname="test_calc.testCalc" file="test_calc.py" line="7" name="test_add" time="0.000380039215088"/>
+<testcase classname="test_calc.testCalc" file="test_calc.py" line="25" name="test_divide" time="0.000444889068604"/>
+<testcase classname="test_calc.testCalc" file="test_calc.py" line="19" name="test_multiply" time="0.00127387046814"/>
+<testcase classname="test_calc.testCalc" file="test_calc.py" line="13" name="test_substract" time="0.000488042831421"/>
+</testsuite>
