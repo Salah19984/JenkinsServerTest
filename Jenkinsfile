@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('Checkout') {
             steps {
@@ -10,17 +10,22 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/Salah19984/JenkinsServerTest.git'        
-                sh 'python3 ./src/calc.py'
+                sh 'python3 calc.py'
             }
     }
         stage('Test') {
             steps {
-               sh 'python3 ./unittest/test_calc.py' 
+               sh 'py.test --junitxml ./test_results/results.xml test_calc.py'
+               step([$class: 'JUnitResultArchiver', checksName: '', testResults: 'test_results/results.xml'])
            }
         }
         stage('Deploy') {
-            steps {
-                echo 'deploying build to /var/lib/jenkins/workspace/TestPipeline/'
+            when {
+                expression {
+                    currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+                }
+            }
+            steps {echo 'deploying build to /var/lib/jenkins/workspace/TestPipeline/'
         }
     }
 }
