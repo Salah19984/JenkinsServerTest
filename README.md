@@ -2,13 +2,15 @@
 Test Repo for the Continuous Integration Project at RWU
 
 
-Installation des Continuous Integration Tools
-Auf die Erklärung zur Einrichtung der VM wird nicht weiter eingegangen. Es wird eine VM mit Linux Ubuntu 18.04 Bionic Beaver verwendet. Der folgende Abschnitt befasst sich mit den nötigen Tools und Bibliotheken, die für die Inbetriebnahme des CI Servers erforderlich sind.
+## Installation des Continuous Integration Tools
+Auf die Erklärung zur Einrichtung der VM wird nicht weiter eingegangen. Es wird eine VM mit Linux Ubuntu 18.04 Bionic Beaver verwendet.  
+Der folgende Abschnitt befasst sich mit den nötigen Tools und Bibliotheken, die für die Inbetriebnahme des CI Servers erforderlich sind.  
 
-2.1	Einrichten der Virtuellen Maschine
-Auf der Jenkins Homepage wird mindestens eine Java Version 8 empfohlen um zu funktionieren. Auf Linux Ubuntu ist Java nicht standardmäßig vorinstalliert. Das kann im Terminal mit java -version überprüft werden.
+## 2.1	Einrichten der Virtuellen Maschine
+Auf der Jenkins Homepage wird mindestens eine Java Version 8 empfohlen um zu funktionieren. Auf Linux Ubuntu ist Java nicht standardmäßig vorinstalliert.  
+Das kann im Terminal mit java -version überprüft werden.  
  
-Abbildung 1: Java Versions Check
+![Abbildung 1: Java Versions Check](/Pfad/zum/Bild.jpg)
 
 Nun kann eine Java Version über den Paketmanager apt mit dem Befehl
  sudo apt-get install openjdk-11-jdk installiert werden. Das Versionsmanagement Tool Git, wird mit dem Befehl sudo apt-get install git installiert. Git muss auf der Maschine installiert sein, da Jenkins darauf zugreift, wenn ein Build Job erstellt wird und die Versionskontrolle als Quelle angibt. Zusätzlich muss eine vollständige Python Umgebung inklusive dem Paketmanager pip installiert sein, damit die Unittests von Jenkins ausgeführt werden können. Alle Python Bibliotheken, die im Projekt verwendet werden müssen, ebenfalls auf dem Jenkins Server vorhanden sein, sofern beispielsweise per bash Befehlsscripts ausgeführt werden sollen, die diese Bibliotheken verwenden. Darum muss noch pytest mit dem Befehl sudo apt install python-pytest installiert werden. Gerade dieser Punkt kann zu erheblichen Problemen führen, wie im vorherigen Abschnitt unter Limitierungen beschrieben wird.
