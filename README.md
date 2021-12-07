@@ -8,7 +8,8 @@ Der folgende Abschnitt befasst sich mit den nötigen Tools und Bibliotheken, die
 
 ## 2.1	Einrichten der Virtuellen Maschine
 Auf der Jenkins Homepage wird mindestens eine Java Version 8 empfohlen um zu funktionieren. Auf Linux Ubuntu ist Java nicht standardmäßig vorinstalliert.  
-Das kann im Terminal mit    *java -version*    überprüft werden.  
+Das kann im Terminal mit    *java -version*  
+überprüft werden.  
  
 ![Abbildung 1: Java Versions Check](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
   
