@@ -171,9 +171,8 @@ der Konsole automatisch in eine *results.xml* Datei im Git Repository. Auf diese
 werden. Es ist die übliche Vorgehensweise, die Testergebnisse als xml Datei darzustellen. So können mithilfe des Jenkins Servers unter anderem auch Statistiken  
 dargestellt werden, die die Erfolgsrate der Tests zeigen und anhand derer der Build als „stable“ oder „unstable“ bewertet werden kann. Die Module JUnit oder xUnit  
 welche zusätzlich installiert werden können bieten hier sehr viele Möglichkeiten. Mit diesen Modulen ist es auch einfach möglich, die xml Datei in eine .html Datei zu  
-parsen und den Report zu veröffentlichen.  
-Gerade für die interne Dokumentation und die Überprüfung der Definition of Done (DoD) ist dies hilfreich. Um dieses Feature nutzen zu können wird zuerst in Jenkins  
-das JUnit Plugin installiert.
+parsen und den Report zu veröffentlichen. Gerade für die interne Dokumentation und die Überprüfung der Definition of Done (DoD) ist dies hilfreich.  
+Um dieses Feature nutzen zu können wird zuerst in Jenkins das JUnit Plugin installiert.  
  
 ![Abbildung 19: Junit Plugin Installation](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)  
 In der in Abbildung 18 zu sehenden Jenkinsfile wird der Schritt ***step([$class: 'JUnitResultArchiver', checksName:‘ ‘, testResults: 'test_results/results.xml'])*** in der  
