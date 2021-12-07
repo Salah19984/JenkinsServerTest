@@ -175,7 +175,7 @@ parsen und den Report zu veröffentlichen.
 Gerade für die interne Dokumentation und die Überprüfung der Definition of Done (DoD) ist dies hilfreich. Um dieses Feature nutzen zu können wird zuerst in Jenkins  
 das JUnit Plugin installiert.
  
-![Abbildung 19: Junit Plugin Installation](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
+![Abbildung 19: Junit Plugin Installation](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)  
  
 In der in Abbildung 18 zu sehenden Jenkinsfile wird der Schritt ***step([$class: 'JUnitResultArchiver', checksName:‘ ‘, testResults: 'test_results/results.xml'])*** in der  
 Test Stage hinzugefügt. Darin wird unter *checksName* angegeben welche xml Datei verglichen werden soll, und unter *testResults* wird der Pfad angegeben, unter dem sich  
