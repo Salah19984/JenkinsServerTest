@@ -38,6 +38,7 @@ Das initialAdminPassword, welches unter dem auf der Seite angegebenen Pfad zu fi
 ![Abbildung 4: Plugins installieren](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)  
   
 Wird die zweite Möglichkeit gewählt, sind die vorgeschlagenen Plugins bereits vorgemerkt. Hier werden die vorgeschlagenen Plugins installiert, die beispielsweise aus dem Pipeline Plugin und dem Git Plugin bestehen welche im weiteren Verlauf noch benötigt werden. Die Liste der vorgeschlagenen Plugins ist auf Abbildung 5 zu sehen.  
+
 ![Abbildung 5: Plugin Installationsvorgang](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
 
 Danach wird der Admin-Nutzer angelegt. Für private Zwecke kann die Emailadresse auch falsch sein oder leer gelassen werden, jedoch bietet es sich an eine gültige Adresse anzugeben um als Admin über das Email Extension Plugin beispielsweise Benachrichtigungen zu versenden wenn ein Build fertig oder fehlgeschlagen ist.  
