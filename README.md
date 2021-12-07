@@ -50,8 +50,8 @@ Danach wird der Admin-Nutzer angelegt. Für private Zwecke kann die Emailadresse
  
 ![Abbildung 6: Admin Konto erstellen](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
 
-Zum Abschluss wird noch die Jenkins URL verändert auf eine gewünschte URL wie beispielsweise eine bereits reservierte Domain. Da der Server nur eine VM mit   
-Netzwerkbrücke und fester IP-Adresse ist und für Demonstrationszwecke nur im eigenen Netzwerk erreichbar sein muss, bleibt sie vorerst unverändert.  
+Zum Abschluss wird noch die Jenkins URL verändert auf eine gewünschte URL wie beispielsweise eine bereits reservierte Domain. Da der Server nur eine VM mit Netzwerkbrücke und  
+fester IP-Adresse ist und für Demonstrationszwecke nur im eigenen Netzwerk erreichbar sein muss, bleibt sie vorerst unverändert.  
 Damit ist die Grundeinstellung abgeschlossen.  
  
 ![Abbildung 7: Jenkins URL anpassen](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
