@@ -100,6 +100,7 @@ Eine CD Pipeline ist in der agilen Softwareentwicklung das Mittel der Wahl um se
 
 Ein Plugin, welches die Arbeit mit Pipelines sehr vereinfacht ist das *Jenkins Plugin Blue Ocean*. Es bietet eine aufgeräumte und erweiterte Ansicht für Pipelines auf der Jenkins Weboberfläche. Dieses Plugin kann für die Pipeline Erstellung noch über *Manage Plugins* installiert werden. Nach der Plugin Installation wird wieder *new item* gewählt und ein eindeutiger Name vergeben. Diesmal wird jedoch statt *Freestyle Project* die Pipeline ausgewählt.  
 ![Abbildung 16: Pipeline anlegen](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb1.png)
+  
 In dieser Option ist es nicht mehr notwendig wie im vorherigen Buildjob alle Schritte einzeln einzurichten, um das Github Repo nach etwaigen Änderungen zu bauen. 
 Nur der neue Reiter *Pipeline* ist interessant, da mithilfe der Jenkinsfile alle vorherigen Auswahlmöglichkeiten in Groovy dargestellt werden können. Hier ist es möglich, das Pipeline Script direkt einzugeben oder es aus dem SCM zu starten. Für diese Demonstration wird es aus dem SCM gestartet, da so die Jenkinsfile in die Versionierung mit aufgenommen werden kann, was die Pflege der Dateien vereinfacht. Im Script selbst sind alle Anweisungen bereits in der richtigen Reihenfolge angegeben um das gesamte Projekt  
 auszuchecken, zu bauen, zu testen und zu deployen.  
