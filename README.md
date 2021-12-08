@@ -27,7 +27,8 @@ Dazu muss die Adresse im Format ***IP:port*** eingegeben werden.
 Abbildung 3: Unlock Jenkins Aufforderung  
 Das initialAdminPassword, welches unter dem auf der Seite angegebenen Pfad zu finden ist wird hier eingegeben. Auf der nächsten Seite werden zwei verschiedene Optionen angezeigt:
 -	die vorgeschlagenen Plugins zu installieren 
--	oder selbst zu wählen welche installiert werden sollen.   
+-	oder selbst zu wählen welche installiert werden sollen.
+
 ![Abbildung 4: Plugins installieren](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb4.png)  
 Abbildung 4: Plugins installieren
 Wird die zweite Möglichkeit gewählt, sind die vorgeschlagenen Plugins bereits vorgemerkt. Hier werden die vorgeschlagenen Plugins installiert, die beispielsweise aus dem Pipeline Plugin und dem Git Plugin bestehen welche im weiteren Verlauf noch benötigt werden. Die Liste der vorgeschlagenen Plugins ist auf Abbildung 5 zu sehen.  
