@@ -106,3 +106,20 @@ Abbildung 20: JUnit Test Result
 Wenn die Pipeline mehr als einmal durchlaufen wurde, wird zusätzlich ein Test Result Trend auf der Weboberfläche von Jenkins als Statistik angezeigt wie in Abbildung 21 zu  sehen ist.   
 ![Abbildung 21: JUnit Test Result Trend](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb21.png)  
 Abbildung 21: JUnit Test Result Trend  
+
+# 5.	Probleme und Lösungen
+## 5.1	Projektorganisation in mehrere Unterordner
+Das Github Projekt in mehrere Unterordner zu organisieren, stellt in Python ein Problem dar, da Packages definiert werden müssen und es schwierig sein kann, dass die import Befehle richtig ausgeführt werden. Besonders wenn wie im Fall dieser Projektarbeit die Unittests in einem Unterordner liegen und direkt dort ausgeführt werden sollen, kennt der Python Interpreter selbst mit __init__.py Datei den Pfad zu dem zu testenden Script nicht. Die Lösung war, im Unittest Script in Codeform den gewünschten Pfad manuell hinzuzufügen, bevor das Script nach existierenden Pfaden sucht, wie im folgenden Bild zu sehen ist.
+ 
+Abbildung 22: Lösung für "module not found" Error
+
+Dies stellt ein noch nicht gefixtes Problem in Python dar der diesen Workaround bis zum Zeitpunkt der Erstellung dieser Projektarbeit leider noch erfordert.
+
+## 5.2	Jenkins Python Umgebung
+Zwei Schwierigkeiten gilt es zu beachten beim Betreiben eines Jenkins Servers auf Linux mit Python:
+Jenkins nutzt standardmäßig die shell, das bedeutet, das source Kommando ist nicht verfügbar.
+Der angelegte Jenkins user ist ein nicht interaktiver Service Account. Das bedeutet Jenkins durchsucht beim Ausführen von shell-Kommandos nicht dieselben PATH Umgebungsvariablen wie der eingeloggte User. Es existiert keine .bashrc und /etc/profile sowie /etc/bash.bashrc haben keinen Effekt. Daraus folgt, dass Jenkins zum Ausführen von Python Scripts nur den Interpreter in /usr/bin/python sieht. Dieser ist standardmäßig in Ubuntu 18.04 Python 2.7.17 und kann Probleme mit dem Modul Pytest verursachen, da es mindestens Version 3.6 benötigt.
+Da Python 2.7 das Modul pathlib nicht kennt, pytest jedoch ausgeführt werden kann war die beste und direkte Lösung, die Projektstruktur dahin zu ändern, dass alle Dateien in einem Ordner liegen und keine Unterordner für die jeweiligen Scripts verwendet werden. Für kleine Projekte ist diese Lösung praktikabel, in großen Python Projekten wird es hingegen schnell unübersichtlich.
+Unter der Überschrift ***Python environment for Jenkins*** auf der Seite https://mdyzma.github.io/2017/10/14/python-app-and-jenkins/ wird noch ein Workaround gezeigt, mit dessen Hilfe Miniconda im Jenkins Workspace installiert werden kann welches dann über die shell ausgeführt wird.
+Eine zweite Lösung wäre es eine Virtual Environment zu nutzen und mit dem Modul ShiningPanda die ganze Pipeline darin auszuführen. Dies sollte dem oben genannten Problem vorbeugen, da Jenkins so genau die Parameter nutzt, die in der Virtual Environment vorgegeben sind.
+
