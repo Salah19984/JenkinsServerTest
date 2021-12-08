@@ -77,7 +77,8 @@ Eine CD Pipeline ist in der agilen Softwareentwicklung das Mittel der Wahl um se
 - Statische Code-Analyse
 - Deployment in einer Staging-Umgebung
 - Funktionale und/oder manuelle Tests
-- Deployment in Produktion   
+- Deployment in Produktion  
+
 ![Abbildung 15: Darstellung einer Pipeline](https://github.com/Salah19984/JenkinsServerTest/blob/main/Pictures/Abb15.png)  
 Abbildung 15: Darstellung einer Pipeline  
 Ein Plugin, welches die Arbeit mit Pipelines sehr vereinfacht ist das *Jenkins Plugin Blue Ocean*. Es bietet eine aufgeräumte und erweiterte Ansicht für Pipelines auf der Jenkins Weboberfläche. Dieses Plugin kann für die Pipeline Erstellung noch über *Manage Plugins* installiert werden. Nach der Plugin Installation wird wieder *new item* gewählt und ein eindeutiger Name vergeben. Diesmal wird jedoch statt *Freestyle Project* die Pipeline ausgewählt.  
